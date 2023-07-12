@@ -16,6 +16,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                     Media Sosial
                 </a>
+                <a class="nav-link" href="{{ route('book.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                    Book
+                </a>
                 {{-- <a class="nav-link" href="/dashboard/intro">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Introduction
