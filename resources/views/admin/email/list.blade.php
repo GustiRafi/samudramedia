@@ -62,22 +62,34 @@
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control @error('email')is-invalid @enderror"
-                                                    name="email" id="email" placeholder="Reply To"
-                                                    value="{{ old('email',$email->email) }}" required readonly>
+                                                <input type="text" class="form-control @error('emailto')is-invalid @enderror"
+                                                    name="emailto" id="emailto" placeholder="Reply To"
+                                                    value="{{ old('emailto',$email->email) }}" required readonly>
                                                 <label for="email">Reply To</label>
-                                                @error('email')
+                                                @error('emailto')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
                                                     </div>
                                                 @enderror
                                             </div>
+                                            {{-- <input type="hidden" value="demo@journal.id3.icu" name="email"> --}}
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control @error('name')is-invalid @enderror"
                                                     name="name" id="name" placeholder="Reply To"
                                                     value="{{ old('name',$email->name) }}" required readonly>
                                                 <label for="name">Reply To</label>
                                                 @error('name')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control @error('email')is-invalid @enderror"
+                                                    name="email" id="email" placeholder="From"
+                                                    value="demo@journal.id3.icu" required readonly>
+                                                <label for="email">From</label>
+                                                @error('email')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
                                                     </div>

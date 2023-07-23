@@ -35,10 +35,10 @@ class InboxController extends Controller
         // });
         $data = inbox::create($validate);
         // dd($data);
-        Mail::to('gustirafi49@gmail.com')->send(new SendMail($data));
+        Mail::to(env('MAIL_USERNAME'))->send(new SendMail($data));
         return redirect()->back()->with('success','Pesan Terkirim');
         } catch (\Throwable $th) {
-            return redirect()->back()->with('error','Pesan gagal Terkirim');
+            dd($th->getMessage());
         }
     }
 

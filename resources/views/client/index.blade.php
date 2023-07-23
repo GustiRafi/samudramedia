@@ -92,7 +92,7 @@
                                 <p>Sed ut perspiciatis unde omnis iste natus error voluptate accusantium doloremque
                                     laudantium, totam rem aperiam eaque ipsa quae abillo inventore.</p>
                             </div>
-                            <div class="section-list-style list-style-v3 mt-22 mb-35">
+                            <div class="mt-22 mb-35">
                                 <ul>
                                     <li>Create A Compelling Landing Page</li>
                                     <li>Baking Structured Data Into Design Process</li>
