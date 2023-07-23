@@ -7,6 +7,7 @@ use App\Models\inbox;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\DB;
 
 class InboxController extends Controller
 {
@@ -26,20 +27,17 @@ class InboxController extends Controller
             'msg' => 'required',
         ]);
         
-        try {
-        // Mail::send('mail.clientSend', array(
-        //     'msg' => $validate['msg'],
-        // ), function($message) use ($request){
-        //     $message->from($request->email,$request->name);
-        //     $message->to(config('app.admin_email'), 'Samudra Media Nusantara')->subject($request->subject);
-        // });
+        DB::beginTransaction(); // Begin the database transaction
+
+    try {
         $data = inbox::create($validate);
-        // dd($data);
         Mail::to(env('MAIL_USERNAME'))->send(new SendMail($data));
-        return redirect()->back()->with('success','Pesan Terkirim');
-        } catch (\Throwable $th) {
-            dd($th->getMessage());
-        }
+        DB::commit(); // Both create and email sending succeeded, commit the transaction
+        return redirect()->back()->with('success', 'Pesan Terkirim');
+    } catch (\Throwable $th) {
+        DB::rollback(); // Something went wrong, rollback the transaction
+        return redirect()->back()->with('error', 'Pesan Gagal Terkirim');
+    }
     }
 
     public function reply(Request $request, string $id){

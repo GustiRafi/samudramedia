@@ -87,7 +87,7 @@
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control @error('email')is-invalid @enderror"
                                                     name="email" id="email" placeholder="From"
-                                                    value="demo@journal.id3.icu" required readonly>
+                                                    value="{{env('MAIL_USERNAME')}}" required readonly>
                                                 <label for="email">From</label>
                                                 @error('email')
                                                     <div class="invalid-feedback">

@@ -62,7 +62,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="card-header">
-                        <h4 class="card-title">Email / Pertanayaan Minggu Ini</h4>
+                        <h4 class="card-title">Email / Pertanyaan Minggu Ini</h4>
                     </div>
                 </div>
                 <div class="card-body">
