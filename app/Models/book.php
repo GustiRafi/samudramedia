@@ -10,4 +10,12 @@ class book extends Model
     use HasFactory;
 
     protected $guarded =['id'];
+
+    public function images() {
+        return $this->hasMany(bookImage::class, 'book_id', 'id');
+    }
+
+    public function category(){
+        return $this->hasOne(category::class,'id','category_id');
+    }
 }

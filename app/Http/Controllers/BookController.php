@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\book;
+use App\Models\category;
+use App\Models\bookImage;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
@@ -24,7 +26,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('admin.book.create');
+        return view('admin.book.create',[
+            'categori' => category::orderBy('id','desc')->get(),
+        ]);
     }
 
     /**
@@ -34,19 +38,34 @@ class BookController extends Controller
     {
         $validate = $request->validate([
             'title' => 'required|min:3',
-            'cover' => 'required|mimes:jpg,jpeg,png',
-            'subject' => 'required',
+            'category_id' => 'required',
+            'price' => 'required',
+            'tahun_terbit' => 'required',
+            'ukuran' => 'required',
+            'tebal' => 'required',
+            'kertas' => 'required',
             'writer' => 'required',
-            'synopsis' => 'required|min:20'
+            'deskripsi' => 'required|min:20',
+            'images.*' => 'mimes:png,jpg,jpeg',
         ]);
         
         $validate['slug'] = str_replace(' ', '-', $validate['title']);
-        $fileName = time().'_'.$request->file('cover')->getClientOriginalName();
-        $request->file('cover')->storeAs('book', $fileName, 'public');
-        $validate['cover'] = $fileName;
-        // $validate['cover'] = $request->file('cover')->store('book');
+        unset($validate['images']);
+        $book = book::create($validate);
 
-        book::create($validate);
+        if ($request->file('images')) {
+            $bookImage = [];
+            foreach ($request->file('images') as $image) {
+                $fileName = time().'_'.$image->getClientOriginalName();
+                $image->storeAs('books', $fileName, 'public');
+                $bookImage[] = [
+                    'book_id' => $book->id,
+                    'path' => $fileName
+                ];
+            }
+            bookImage::insert($bookImage);
+        }
+
         return redirect()->back()->with('success','Berhasil menambahkan buku baru');
     }
 
@@ -67,6 +86,7 @@ class BookController extends Controller
     {
         return view('admin.book.edit',[
             'book' => book::find($id),
+            'categori' => category::orderBy('id','desc')->get(),
         ]);
     }
 
@@ -77,23 +97,35 @@ class BookController extends Controller
     {
         $validate = $request->validate([
             'title' => 'required|min:3',
-            'cover' => 'mimes:jpg,jpeg,png',
-            'subject' => 'required',
+            'category_id' => 'required',
+            'price' => 'required',
+            'tahun_terbit' => 'required',
+            'ukuran' => 'required',
+            'tebal' => 'required',
+            'kertas' => 'required',
             'writer' => 'required',
-            'synopsis' => 'required|min:20'
+            'deskripsi' => 'required|min:20',
+            'images.*' => 'mimes:png,jpg,jpeg',
         ]);
-
-        $book = book::find($id);
+        
         $validate['slug'] = str_replace(' ', '-', $validate['title']);
+        unset($validate['images']);
+        
+        book::where('id',$id)->update($validate);
 
-        if($request->file('cover')){
-            File::delete(public_path('/storage/book/'.$book->cover));
-            $fileName = time().'_'.$request->file('cover')->getClientOriginalName();
-            $request->file('cover')->storeAs('book', $fileName, 'public');
-            $validate['cover'] = $fileName;
+        if ($request->file('images')) {
+            $bookImage = [];
+            foreach ($request->file('images') as $image) {
+                $fileName = time().'_'.$image->getClientOriginalName();
+                $image->storeAs('books', $fileName, 'public');
+                $bookImage[] = [
+                    'book_id' => $book->id,
+                    'path' => $fileName
+                ];
+            }
+            bookImage::insert($bookImage);
         }
 
-        book::where('id',$id)->update($validate);
 
         return redirect()->back()->with('success','Berhasil mengubah buku');
     }
@@ -101,13 +133,15 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Book $book)
     {
-        $book = book::find($id);
-        File::delete(public_path('/storage/book/'.$book->cover));
-        
-        book::where('id',$id)->delete();
 
-        return redirect()->back()->with('succcess','Berhasil menghapus buku');
+        $images = $book->images;
+        $images->each(function($image, $key){
+            File::delete(public_path('/storage/books/'.$image->path));
+            $image->delete();
+        });
+        $book->delete();
+        return redirect()->back()->with('success','Berhasil menghapus buku');
     }
 }

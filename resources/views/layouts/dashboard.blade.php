@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/css/trix.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/datatables-bootstrap.min.css">
+
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -26,30 +29,31 @@
             @include('partials.footer')
         </div>
     </div>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    {{-- <script src="/assets/demo/chart-area-demo.js"></script>
-    <script src="/assets/demo/chart-bar-demo.js"></script> --}}
     <script src="/assets/js/trix.js"></script>
+    <script src="/assets/js/jquery-datatable.min.js"></script>
+    <script src="/assets/js/datatables-bootstrap.min.js"></script>
+     <!-- Chart Custom JavaScript -->
+     <script src="/assets/js/raphael-min.js"></script>
+     <script src="/assets/js/morris.min.js"></script>
+     <script src="/assets/js/chart-custom.js"></script>
     <script>
-    document.addEventListener("trix-file-accept", event => {
-        event.preventDefault()
-    })
+        document.addEventListener("trix-file-accept", event => {
+            event.preventDefault()
+        })
 
-    var loadFile = function(event) {
-        var output = document.getElementById('output');
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function() {
-            URL.revokeObjectURL(output.src) // free memory
-        }
-    };
+        var loadFile = function (event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function () {
+                URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+
     </script>
-    <script>
-        let table = new DataTable('#datatable');
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    {{-- <script src="js/datatables-simple-demo.js"></script> --}}
+    @yield('js')
 </body>
 
 </html>

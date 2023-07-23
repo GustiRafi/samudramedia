@@ -14,11 +14,17 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
-            $table->string('subject');
-            $table->string('cover');
+            $table->string('slug')->unique();
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
+            $table->integer('price');
             $table->string('writer');
-            $table->text('synopsis');
+            $table->text('deskripsi');
+            $table->enum('status',['tersedia','sold'])->default('tersedia');
+            // $table->string('ISBN');
+            $table->string('tahun_terbit');
+            $table->string('ukuran');
+            $table->string('tebal');
+            $table->string('kertas');
             $table->timestamps();
         });
     }

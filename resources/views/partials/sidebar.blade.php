@@ -12,13 +12,29 @@
                     Profile
                 </a>
                 <div class="sb-sidenav-menu-heading">Menu</div>
-                <a class="nav-link" href="{{ route('sosmed.index') }}">
+                {{-- <a class="nav-link" href="{{ route('sosmed.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                     Media Sosial
+                </a> --}}
+                <a class="nav-link" href="{{ route('categori.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+                    Categories
                 </a>
                 <a class="nav-link" href="{{ route('book.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                     Book
+                </a>
+                <a class="nav-link" href="{{ route('journal.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                    Journal
+                </a>
+                <a class="nav-link" href="{{ route('service.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-bell-concierge"></i></div>
+                    Service
+                </a>
+                <a class="nav-link" href="{{ route('email.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+                    email  <span class="badge bg-primary m-2">{{ App\Models\inbox::all()->where('status', 'terkirim')->count() }}</span>
                 </a>
                 {{-- <a class="nav-link" href="/dashboard/intro">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
