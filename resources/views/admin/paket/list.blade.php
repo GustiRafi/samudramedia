@@ -13,7 +13,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <table class="table table-responsive" id="datatable">
+    <div class="table-responsive">
+        <table id="datatable" class="table table-bordered table-stripped">
         <thead>
             <tr>
                 <th>No</th>
@@ -54,6 +55,7 @@
             @endforeach
         </tbody>
     </table>
+    </div>
 </div>
 </div>
 </div>

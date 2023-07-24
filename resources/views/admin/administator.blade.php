@@ -46,9 +46,9 @@
         </div>
     </div>
     <div class="row mt-3">
-        <div class="col-md-6 col-12">
+        <div class="col-md-6 col-12 mb-3">
             <div class="card">
-                <div class="card-header d-flex justify-content-between">
+                <div class="card-header">
                     <div class="card-header">
                         <h4 class="card-title">Pertumbuhan Buku Minggu Ini</h4>
                     </div>
@@ -58,21 +58,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-12">
+        <div class="col-md-6 col-12 mb-3">
             <div class="card">
-                <div class="card-header d-flex justify-content-between">
+                <div class="card-header">
                     <div class="card-header">
                         <h4 class="card-title">Email / Pertanyaan Minggu Ini</h4>
                     </div>
                 </div>
                 <div class="card-body">
-                    <div id="pertumbuhan-email"></div>
+                    <div id="pertumbuhan-email" class="w-100"></div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 @endsection
 @section('js')
