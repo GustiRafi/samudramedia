@@ -26,7 +26,9 @@
                                     </a>
                                     <div class="card-body">
                                       <h4 class="text-center text-success">{{$journal->name}}</h4>
+                                      <div class="section-list-style list-style-v3 mt-22 mb-35">
                                       {!!$journal->feature!!}
+                                      </div>
                                     </div>
                                   </div>
                             </div>
