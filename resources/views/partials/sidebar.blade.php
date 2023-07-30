@@ -16,6 +16,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                     Media Sosial
                 </a> --}}
+                <a class="nav-link" href="{{ route('produk.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+                    Products
+                </a>
                 <a class="nav-link" href="{{ route('categori.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
                     Categories

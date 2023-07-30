@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <!-- Desktop and Mobile Menu -->
-                    <div class="col-xl-6 col-sm-1 col-2">
+                    <div class="col-xl-7 col-sm-1 col-2">
                         <div class="primary-menu">
                             <div class="nav-menu">
                                 <!-- Navbar Close Icon -->
@@ -84,6 +84,14 @@
                                             <ul class="sub-menu">
                                                 @foreach (App\Models\service::orderBy('id','desc')->get() as $item)
                                                 <li><a href="{{ route('service',$item->slug ) }}" class="nav-link @if(Route::is('service',$item->slug)) active @endif">{{$item->name}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="nav-link">Product</a>
+                                            <ul class="sub-menu">
+                                                @foreach (App\Models\product::orderBy('id','desc')->get() as $item)
+                                                <li><a href="{{ route('product',$item->slug ) }}" class="nav-link @if(Route::is('product',$item->slug)) active @endif">{{$item->name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>

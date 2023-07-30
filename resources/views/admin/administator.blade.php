@@ -20,6 +20,15 @@
         <div class="col-12 col-lg-3 col-md-3 mb-3">
             <div class="card shadow text-center">
                 <div class="py-4">
+                    <h4><i class="fas fa-list"></i></h4>
+                    <h5>Product</h5>
+                    <h6 class="">{{ $product }}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 col-md-3 mb-3">
+            <div class="card shadow text-center">
+                <div class="py-4">
                     <h4><i class="fa-solid fa-bell-concierge"></i></h4>
                     <h5>Service</h5>
                     <h6 class="">{{ $service }}</h6>

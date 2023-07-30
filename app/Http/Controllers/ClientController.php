@@ -7,6 +7,7 @@ use App\Models\service;
 use App\Models\book;
 use App\Models\category;
 use App\Models\journal;
+use App\Models\product;
 
 class ClientController extends Controller
 {
@@ -41,6 +42,13 @@ class ClientController extends Controller
         return view('client.bookByCategory',[
             'category' => $category,
             'books' => book::where('category_id',$category->id)->orderBY('id','desc')->get(),
+        ]);
+    }
+
+    public function product(string $slug){
+        return view('client.product',[
+            'produk' => product::firstWhere('slug',$slug),
+            // 'products' => product::where('slug', '!=', $slug)->orderBy('created_at', 'desc')->take(3)->get(),
         ]);
     }
 

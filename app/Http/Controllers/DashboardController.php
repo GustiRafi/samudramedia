@@ -7,6 +7,7 @@ use App\Models\book;
 use App\Models\service;
 use App\Models\inbox;
 use App\Models\journal;
+use App\Models\product;
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 
@@ -18,6 +19,7 @@ class DashboardController extends Controller
             'service' => service::all()->count(),
             'inbox' => inbox::all()->count(),
             'journal' => journal::all()->count(),
+            'product' => product::all()->count(),
             'bookAnalytic' => $this->statistikaBook(),
             'inboxAnalytic' => $this->statistikaInbox(),
         ]);

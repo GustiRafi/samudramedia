@@ -12,6 +12,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\PaketController;
 use App\Http\Controllers\DetailServiceController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::get('/journals',[ClientController::class,'journal'])->name('journals');
 Route::get('book/{slug}',[ClientController::class,'bookDetail'])->name('book');
 Route::get('service/{slug}',[ClientController::class,'service'])->name('service');
 Route::get('category/{slug}',[ClientController::class,'category'])->name('category');
+Route::get('product/{slug}',[ClientController::class,'product'])->name('product');
 
 Route::get('/search',[ClientController::class,'search'])->name('search');
 
@@ -43,6 +45,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::resource('bookImage',BookImageController::class);
         Route::resource('service',ServiceController::class);
         Route::resource('journal',JournalController::class);
+        Route::resource('produk',ProductController::class);
 
         Route::group(['prefix' => 'paket'], function(){
             Route::get('create/{id}',[PaketController::class,'create'])->name('paket.create');
