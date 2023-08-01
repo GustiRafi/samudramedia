@@ -5,7 +5,10 @@
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card border-0 shadow rounded-3 my-5">
                 <div class="card-body p-4 p-sm-5">
-                    <h5 class="card-title text-center mb-5 fw-light fs-5">Samudra Media Nusantara</h5>
+                    {{-- <h5 class="card-title text-center mb-5 fw-light fs-5">Samudra Media Nusantara</h5> --}}
+                    <div class="text-center">
+                        <img src="assets/img/samudralogo.png" class="card-img-top h-50 w-50" alt="" srcset="">
+                    </div>
                     <form method="post">
                         @csrf
                         <div class="form-floating mb-3">

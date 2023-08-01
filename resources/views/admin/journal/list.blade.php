@@ -34,8 +34,8 @@
                     </td>
                     <td>{!! $journal->feature !!}</td>
                     <td><a href="{{ $journal->link }}" target="_blank" rel="noopener noreferrer">{{ $journal->link }}</a></td>
-                    <td class="d-inline">
-                        <a href="{{ route('journal.edit', $journal->id) }}" class="btn btn-success"><i
+                    <td class="d-flex">
+                        <a href="{{ route('journal.edit', $journal->id) }}" class="btn btn-success btn-sm me-2"><i
                                 class="fas fa-pen"></i></a>
                         {{-- <a href="{{ route('journal.show', $journal->id) }}" class="btn btn-primary"><i
                                 class="fas fa-eye"></i></a> --}}
@@ -44,7 +44,7 @@
                             @method('delete')
                             <button type="submit" 
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
-                                class="btn btn-danger">
+                                class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>

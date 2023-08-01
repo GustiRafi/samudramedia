@@ -1287,7 +1287,7 @@ button {
 /* Preloader */
 .preloader {
     position: fixed;
-    background-color: #161c2d;
+    background-color: white;
     background-position: center center;
     background-repeat: no-repeat;
     top: 0;
@@ -1379,20 +1379,20 @@ button {
 /* Scroll To Top */
 .scroll-to-top {
     display: inline-block;
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
     background-color: #473BF0;
     position: fixed;
     bottom: 40px;
     right: 40px;
     z-index: 99;
     text-align: center;
-    -webkit-transition: all 0.4s ease;
+    /* -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    display: none;
+    display: none; */
     border-radius: 50%;
-    transition: all 0.4s ease;
+    /* transition: all 0.4s ease;
     -webkit-animation-name: float-bob-y;
 	        animation-name: float-bob-y;
 	-webkit-animation-duration: 2s;
@@ -1400,7 +1400,7 @@ button {
 	-webkit-animation-iteration-count: infinite;
 	        animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
-	        animation-timing-function: linear;
+	        animation-timing-function: linear; */
 }
 .scroll-to-top i {
     color: #ffffff;

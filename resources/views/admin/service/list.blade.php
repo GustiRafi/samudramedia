@@ -33,20 +33,20 @@
                     <td>{{ $service->name }}</td>
                     <td>{{$service->headline}}</td>
                     <td><a href="{{ route('paket.index', $service->id) }}">{{$service->paket->count()}}</a></td>
-                    <td><a href="{{ route('paket.create', $service->id) }}" class="btn btn-primary">Tambah Paket</a></td>
+                    <td><a href="{{ route('paket.create', $service->id) }}" class="badge bg-primary ">Tambah Paket</a></td>
                     <td><a href="{{ route('detail.index', $service->id) }}">{{$service->detail->count()}}</a></td>
-                    <td><a href="{{ route('detail.create', $service->id) }}" class="btn btn-primary">Tambah Fitur</a></td>
-                    <td class="d-inline">
-                        <a href="{{ route('service.edit', $service->id) }}" class="btn btn-success"><i
+                    <td><a href="{{ route('detail.create', $service->id) }}" class="badge bg-primary">Tambah Fitur</a></td>
+                    <td class="d-flex">
+                        <a href="{{ route('service.edit', $service->id) }}" class="btn btn-success btn-sm me-2"><i
                                 class="fas fa-pen"></i></a>
-                        <a href="{{ route('service.show', $service->id) }}" class="btn btn-primary"><i
+                        <a href="{{ route('service.show', $service->id) }}" class="btn btn-primary btn-sm me-2"><i
                                 class="fas fa-eye"></i></a>
                         <form method="POST" action="{{ route('service.destroy', $service->id) }}" class="d-inline">
                             @csrf
                             @method('delete')
                             <button type="submit" 
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
-                                class="btn btn-danger">
+                                class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>
@@ -59,4 +59,9 @@
 </div>
 </div>
 </div>
+@endsection
+@section('js')
+   <script>
+        $('#datatable').DataTable();
+   </script>
 @endsection

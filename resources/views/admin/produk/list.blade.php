@@ -32,8 +32,8 @@
                         <img src="{{ '/storage/products/'.$produk->image }}" width="256" style="object-fit: contain" alt="">                                            
                     </td>
                     <td>{!! $produk->deskripsi !!}</td>
-                    <td class="d-inline">
-                        <a href="{{ route('produk.edit', $produk->id) }}" class="btn btn-success"><i
+                    <td class="d-flex">
+                        <a href="{{ route('produk.edit', $produk->id) }}" class="btn btn-success btn-sm me-2"><i
                                 class="fas fa-pen"></i></a>
                         {{-- <a href="{{ route('produk.show', $produk->id) }}" class="btn btn-primary"><i
                                 class="fas fa-eye"></i></a> --}}
@@ -42,7 +42,7 @@
                             @method('delete')
                             <button type="submit" 
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
-                                class="btn btn-danger">
+                                class="btn btn-danger btn-sm ">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>

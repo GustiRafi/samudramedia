@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albasith Center Foundation</title>
+    <title>Samudra Media Nusantara</title>
     <!--====== Bootstrap ======-->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!--====== Font Awesome ======-->
@@ -27,7 +27,7 @@
     <!--====== Responsive Stylesheet ======-->
     <link rel="stylesheet" href="/assets/css/responsive.css">
     <!-- Place favicon in the root directory -->
-    <link rel="icon" type="image/png" href="/assets/img/logo.jpeg">
+    <link rel="icon" type="image/png" href="/assets/img/samudralogo2.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     @yield('css')
 </head>
@@ -35,34 +35,21 @@
 <body>
     <!--======= Start Preloader =======-->
     <div class="preloader">
-        <img class="preloader-image" width="60" src="/assets/img/logo.jpeg" alt="preloader" />
+        <img class="preloader-image" width="100" src="/assets/img/samudralogo.png" alt="preloader" />
     </div> <!-- /.preloader -->
     <!--======= End Preloader =======-->
-    <!--====== Start Search From ======-->
-    <!-- <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form>
-                    <div class="form_group">
-                        <input type="text" class="form_control" placeholder="Search here...">
-                        <button class="search_btn"><i class="fa fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>  -->
     <!--======= End Search Form =======-->
     <!--====== Start Header Area ======-->
-    <header class="header-area header-v6">
+    <header class="header-area header-v2">
         <div class="header-navigation">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Brand Logo -->
                     <div class="col-xl-2 col-sm-5 col-5">
                         <div class="brand-logo">
-                            <a href="index.html">
-                                <h5 class="logo-v1">Albasith Center</h5>
-                                <h5 class="logo-v2">Albasith Center</h5>
+                            <a href="/">
+                                <h5 class="logo-v1">Samudra Media</h5>
+                                <h5 class="logo-v2">Samudra Media</h5>
                             </a>
                         </div>
                     </div>
@@ -145,27 +132,30 @@
     <!--====== End Header Area ======-->
     @yield('content')
     <!--====== Start Footer Area ======-->
-    <footer class="footer-area footer-area-v4 bg-dark-blue">
+    <footer class="footer-area footer-area-v4 bg-clear-blue">
         <div class="container">
             <div class="footer-area-internal">
                 <div class="row">
                     <!-- Single Footer Widget -->
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="single-footer-widget footer-text-widget">
-                            <h5 class="widget-title">Albasith Center Foundation</h5>
+                            <div class="footer-logo">
+                                <img src="/assets/img/samudralogo.png" alt="footer logo white">
+                            </div>
                         </div>
                     </div>
                     <!-- Single Footer Widget -->
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="single-footer-widget footer-text-widget">
-                            <h5 class="widget-title">About Albasith Center Foundation</h5>
-                            <p>Forum Publikasi Karya Ilmiah  & Penelitian</p>
+                            <h5 class="widget-title">Tentang Samudra Media Nusantara</h5>
+                            <p class="text-white">Forum Publikasi Karya Ilmiah  & Penelitian</p>
                             <div class="footer-social-links">
                                 <ul>
                                     <li><a href="https://www.facebook.com/groups/377489527863338/?ref=share"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="https://twitter.com/albasith_center"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="https://t.me/+v1zCDFBmCiNlYTll"><i class="fa-brands fa-telegram"></i></i></a></li>
                                     <li><a href="https://instagram.com/albasith.center"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://youtube.com/@al-basithcenter8748"><i class="fab fa-youtube"></i></a></li>
                                     {{-- <li><a href="#"><i class="fab fa-linkedin"></i></a></li> --}}
                                 </ul>
                             </div>
@@ -177,8 +167,8 @@
                             <h5 class="widget-title">Resources</h5>
                             <div class="footer-widget-menu">
                                 <ul>
-                                    <li><a href="/books">Buku</a></li>
-                                    <li><a href="/journals">Journal</a></li>
+                                    <li><a class="text-white" href="/books">Buku</a></li>
+                                    <li><a class="text-white" href="/journals">Journal</a></li>
                                     {{-- <li><a href="#Contact">Contact Us</a></li> --}}
                                 </ul>
                             </div>
@@ -190,11 +180,10 @@
                             <h5 class="widget-title">Contact Us</h5>
                             <div class="footer-widget-menu">
                                 <ul>
-                                    <li><a href="#"><i class="fal fa-map-marker-alt"></i> 55 Old Broad Street, London,
-                                            EC2M</a></li>
-                                    <li><a href="mailto:support@gmail.com"><i class="fal fa-envelope-open-text"></i>
-                                            support@gmail.com</a></li>
-                                    <li><a href="tel:+01234567899"><i class="fal fa-phone"></i> +012 (345) 678 99</a>
+                                    <li> <a class="text-white" href="#"><i class="fal fa-map-marker-alt text-white"></i> Bululawang, Malang, Jawa Timur, Indonesia</a></li>
+                                    <li><a class="text-white" href="mailto:samuderamedianusantara@gmail.com"><i class="fal fa-envelope-open-text text-white"></i>
+                                        samuderamedianusantara@gmail.com</a></li>
+                                    <li><a class="text-white" href="tel:082134403154"><i class="fal fa-phone text-white"></i> 082134403154</a>
                                     </li>
                                 </ul>
                             </div>
@@ -207,8 +196,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-12">
-                        <div class="footer-copyright text-center">
-                            <p>&copy; 2021 <a href="#">Albasith Foundation.</a> All Rights Reserved</p>
+                        <div class="footer-copyright text-center text-white">
+                            <p class="text-white">&copy; 2023 <a href="#" class="text-white">Samudra Media.</a> All Rights Reserved</p>
                         </div>
                     </div>
                 </div> <!-- /.row -->
@@ -217,8 +206,8 @@
     </footer> <!-- /.footer-area -->
     <!--====== End Footer Area ======-->
     <!--======= Scroll To Top =======-->
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top bg-clear-blue"><i
-            class="fa fa-angle-up"></i></a>
+    <a href="http://wa.me/{{ env('ADMIN_WHATSAPP') }}" target="_blank" class="scroll-to-top bg-success"><h2><i
+            class="fa-brands fa-whatsapp text-white my-2"></i></h2></a>
     <!--====== Optional Javascript ======-->
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <!--====== Popper JS ======-->

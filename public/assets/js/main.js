@@ -431,16 +431,16 @@
         });
     }
     // Window Scroll Event
-    $(window).on("scroll", function () {
-        if ($(".scroll-to-top").length) {
-            var strickyScrollPos = 100;
-            if ($(window).scrollTop() > strickyScrollPos) {
-                $(".scroll-to-top").fadeIn(500);
-            } else if ($(this).scrollTop() <= strickyScrollPos) {
-                $(".scroll-to-top").fadeOut(500);
-            }
-        }
-    });
+    // $(window).on("scroll", function () {
+    //     if ($(".scroll-to-top").length) {
+    //         var strickyScrollPos = 100;
+    //         if ($(window).scrollTop() > strickyScrollPos) {
+    //             $(".scroll-to-top").fadeIn(500);
+    //         } else if ($(this).scrollTop() <= strickyScrollPos) {
+    //             $(".scroll-to-top").fadeOut(500);
+    //         }
+    //     }
+    // });
 
     /*---------------------------------------------*
      * Preloader

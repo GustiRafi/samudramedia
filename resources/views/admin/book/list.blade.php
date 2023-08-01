@@ -38,17 +38,17 @@
                     </td>
                     <td>@currency($book->price)</td>
                     <td>{{ $book->writer }}</td>
-                    <td class="d-inline">
-                        <a href="{{ route('book.edit', $book->id) }}" class="btn btn-success"><i
+                    <td class="d-flex">
+                        <a href="{{ route('book.edit', $book->id) }}" class="btn btn-success btn-sm me-2"><i
                                 class="fas fa-pen"></i></a>
-                        <a href="{{ route('book.show', $book->id) }}" class="btn btn-primary"><i
+                        <a href="{{ route('book.show', $book->id) }}" class="btn btn-primary btn-sm me-2"><i
                                 class="fas fa-eye"></i></a>
                         <form method="POST" action="{{ route('book.destroy', $book->id) }}" class="d-inline">
                             @csrf
                             @method('delete')
                             <button type="submit" 
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
-                                class="btn btn-danger">
+                                class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>

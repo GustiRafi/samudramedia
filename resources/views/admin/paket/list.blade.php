@@ -39,14 +39,14 @@
                         @endif
                     </td>
                     <td>@currency($item->price)</td>
-                    <td class="d-inline">
-                        <a href="{{ route('paket.edit', $item->id) }}" class="btn btn-success"><i
+                    <td class="d-flex">
+                        <a href="{{ route('paket.edit', $item->id) }}" class="btn btn-success btn-sm me-2"><i
                                 class="fas fa-pen"></i></a>
                         <form method="POST" action="{{ route('paket.destroy', $item->id) }}" class="d-inline">
                             @csrf
                             <button type="submit" 
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
-                                class="btn btn-danger">
+                                class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>

@@ -1,34 +1,40 @@
 @extends('layouts.client')
 @section('content')
-<!--====== Start Breadcrumb Area ======-->
-<section class="hero-area hero-v3 jumbotron bg-solid-dark" style="background-image: url(assets/img/hero/map-bg.png);">
-    <div class="container mt-5">
-        <div class="py-4 text-white col-12 col-lg-6 col-md-6">
-            <h3>{{$service->name}}</h3>
-            <p>{!! $service->deskripsi !!}</p>
-            <a href="http://wa.me/{{ env('ADMIN_WHATSAPP') }}?text=halo%20saya%20ingin%20mengetahui%20detail%20{{$service->name}}" class="btn btn-outline-light my-3">Pesan Sekarang</a>
-
-            <!-- <div class="section-internal">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <div class="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                                <h1>Service Details</h1>
-                            </div>
-                            <div class=" wow fadeInUp" data-wow-delay="0.2s"
-                                data-wow-duration="1500ms">
-                                <ul class="breadcrumb">
-                                    <li><a href="index.html">Publish in a journal </a></li>
-                                    <li class="active">Service Details</li>
-                                </ul>
-                            </div>
+<!--====== Start Hero Area ======-->
+<section class="hero-area hero-v2 bg-contain bg-ocean-blue hero-padding"
+    style="background-image: url(assets/img/hero/hero-map-bg.png);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="card border-0 bg-transparent">
+                    <div class="breadcrumb-content text-center text-white">
+                        <div class="page-title wow fadeInDown mb-2" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                            <h1>{{$service->name}}</h1>
+                        </div>
+                        <div class="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
+                            {{-- <ul class="breadcrumb"> --}}
+                                {!! $service->deskripsi !!}
+                                <a href="http://wa.me/{{ env('ADMIN_WHATSAPP') }}?text=halo%20saya%20ingin%20mengetahui%20detail%20{{$service->name}}" class="btn btn-outline-light my-3">Pesan Sekarang</a>
+                            {{-- </ul> --}}
                         </div>
                     </div>
-                </div> 
-            </div>  -->
-        </div> <!-- /.container -->
-</section> <!-- /.breadcrumb-area -->
-<!--====== End Breadcrumb Area ======-->
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="blob-image-wrapper">
+                    <div class="blob-shape-wrapper">
+                        <img src="/assets/img/particle/thumbs-up-particle-white.png" alt="white thumbs up"
+                            class="blob-shape blob-shape-1 animate-float-bob-y">
+                        <img src="/assets/img/particle/announcement-particle-white.png" alt="white announcement"
+                            class="blob-shape blob-shape-2 animate-float-bob-x">
+                        <img src="/assets/img/particle/paper-plane-particle-white.png" alt="white paper plane"
+                            class="blob-shape blob-shape-3 animate-float-bob-x">
+                    </div>
+            </div>
+        </div> <!-- /.row -->
+    </div> <!-- .container -->
+</section> <!-- /.hero-area -->
+<!--======= End Hero Area =======-->
 <!--====== Start Service Details Area ======-->
 <section class="service-details-wrapper pt-125 pb-95">
     <div class="container">
@@ -75,7 +81,9 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <!-- <blockquote class="blockquote mb-0"> -->
-                                    {!! $item->feature !!}
+                                    <div class="pricing-plan-features">
+                                        {!! $item->feature !!}
+                                    </div>
                                     <!-- <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer> -->
                                     <!-- </blockquote> -->
                                 </div>
@@ -105,24 +113,24 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            @foreach ($services as $item)    
-            <div class="col-lg-4 mb-3">
-                <div class="card single-service-box-v3 wow fadeInUp" data-wow-delay="0.2s"
-                    data-wow-duration="1500ms">
-                    <div class="card-img-top">
-                        <img src="{{ '/storage/services/'.$item->image }}" class="service thumbnail two" alt=""> 
-                        {{-- <img src="https://www.emeraldgrouppublishing.com/sites/default/files/styles/service_page_banner_desktop/public/2019-12/SER2%20-%20FW%20Library%20open%20book.jpg?itok=ARYhFciG%201x"
-                            alt="service thumbnail two"> --}}
-                    </div>
-                    <div class="card-body">
-                        <h5 class="service-box-title">{{$item->name}}</h5>
-                        <p>{{$item->headline}}</p>
-                        <div class="service-box-btn my-3">
-                            <a href="{{ route('service',$item->slug ) }}">Read More <i class="fas fa-arrow-right"></i></a>
+            @foreach($services as $item)
+                <div class="col-lg-4 mb-2">
+                    <div class="card single-service-box single-service-box-v2 wow fadeInUp" data-wow-delay="0.2s"
+                        data-wow-duration="1500ms">
+                        <div class="card-img-top">
+                            <img src="{{ '/storage/services/'.$item->image }}"
+                                class="service thumbnail two" alt="">
+                        </div>
+                        <div class="card-body service-box-content">
+                            <h5 class="service-box-title">{{ $item->name }}</h5>
+                            <p>{{ $item->headline }}</p>
+                            <div class="service-box-btn my-3">
+                                <a href="{{ route('service',$item->slug ) }}"><i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             @endforeach
         </div> <!-- /.row -->
     </div> <!-- /.container -->
