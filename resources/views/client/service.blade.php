@@ -1,40 +1,16 @@
 @extends('layouts.client')
+@section('jumbotron')
+<div class="page-title wow fadeInDown mb-2" data-wow-delay="0.1s" data-wow-duration="1500ms">
+    <h2>{{$service->name}}</h2>
+</div>
+<div class="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
+    {{-- <ul class="breadcrumb"> --}}
+        {!! $service->deskripsi !!}
+        <a href="http://wa.me/{{ env('ADMIN_WHATSAPP') }}?text=halo%20saya%20ingin%20mengetahui%20detail%20{{$service->name}}" class="btn btn-outline-light my-3">Pesan Sekarang</a>
+    {{-- </ul> --}}
+</div>
+@endsection
 @section('content')
-<!--====== Start Hero Area ======-->
-<section class="hero-area hero-v2 bg-contain bg-ocean-blue hero-padding"
-    style="background-image: url(assets/img/hero/hero-map-bg.png);">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12">
-                <div class="card border-0 bg-transparent">
-                    <div class="breadcrumb-content text-center text-white">
-                        <div class="page-title wow fadeInDown mb-2" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                            <h1>{{$service->name}}</h1>
-                        </div>
-                        <div class="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
-                            {{-- <ul class="breadcrumb"> --}}
-                                {!! $service->deskripsi !!}
-                                <a href="http://wa.me/{{ env('ADMIN_WHATSAPP') }}?text=halo%20saya%20ingin%20mengetahui%20detail%20{{$service->name}}" class="btn btn-outline-light my-3">Pesan Sekarang</a>
-                            {{-- </ul> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="blob-image-wrapper">
-                    <div class="blob-shape-wrapper">
-                        <img src="/assets/img/particle/thumbs-up-particle-white.png" alt="white thumbs up"
-                            class="blob-shape blob-shape-1 animate-float-bob-y">
-                        <img src="/assets/img/particle/announcement-particle-white.png" alt="white announcement"
-                            class="blob-shape blob-shape-2 animate-float-bob-x">
-                        <img src="/assets/img/particle/paper-plane-particle-white.png" alt="white paper plane"
-                            class="blob-shape blob-shape-3 animate-float-bob-x">
-                    </div>
-            </div>
-        </div> <!-- /.row -->
-    </div> <!-- .container -->
-</section> <!-- /.hero-area -->
-<!--======= End Hero Area =======-->
 <!--====== Start Service Details Area ======-->
 <section class="service-details-wrapper pt-125 pb-95">
     <div class="container">

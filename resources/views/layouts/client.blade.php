@@ -83,10 +83,10 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{{ route('books') }}" class="nav-link @if(Route::is('books')) active @endif">Buku</a>
+                                            <a href="{{ route('books') }}" class="nav-link @if(Route::is('books')) active @endif">Books</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{{ route('journals') }}" class="nav-link @if(Route::is('journals')) active @endif">Jurnal</a>
+                                            <a href="{{ route('journals') }}" class="nav-link @if(Route::is('journals')) active @endif">Journals</a>
                                         </li>
                                         {{-- <li class="menu-item">
                                             <a href="#About" class="nav-link">About</a>
@@ -95,7 +95,7 @@
                                             <a href="#Contact" class="nav-link">Contact</a>
                                         </li> --}}
                                         <li class="menu-item menu-item-has-children">
-                                            <a href="#" class="nav-link">Kategori</a>
+                                            <a href="#" class="nav-link">Categories</a>
                                             <ul class="sub-menu">
                                                 @foreach (App\Models\category::orderBy('id','desc')->get() as $item)
                                                 <li><a href="{{ route('category',$item->slug ) }}" class="nav-link @if(Route::is('category',$item->slug)) active @endif">{{$item->name}}</a></li>
@@ -130,6 +130,30 @@
         </div> <!-- /.header-navigation -->
     </header> <!-- /.header-area -->
     <!--====== End Header Area ======-->
+    <section class="hero-area hero-v2 bg-contain bg-clear-blue hero-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <div class="section-title section-title-white">
+                            @yield('jumbotron')
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="blob-image-wrapper">
+                        <div class="blob-shape-wrapper">
+                            <img src="/assets/img/particle/thumbs-up-particle-white.png" alt="white thumbs up"
+                                class="blob-shape blob-shape-1 animate-float-bob-y">
+                            <img src="/assets/img/particle/announcement-particle-white.png" alt="white announcement"
+                                class="blob-shape blob-shape-2 animate-float-bob-x">
+                            <img src="/assets/img/particle/paper-plane-particle-white.png" alt="white paper plane"
+                                class="blob-shape blob-shape-3 animate-float-bob-x">
+                        </div>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- .container -->
+    </section> <!-- /.hero-area -->
     @yield('content')
     <!--====== Start Footer Area ======-->
     <footer class="footer-area footer-area-v4 bg-clear-blue">

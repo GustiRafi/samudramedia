@@ -1,33 +1,11 @@
 @extends('layouts.client')
+@section('jumbotron')
+<div class="page-title wow fadeInDown mb-2" data-wow-delay="0.1s" data-wow-duration="1500ms">
+    <h2>Forum <span>Publikasi
+        Karya Ilmiah & Penelitian</span></h2>
+</div>
+@endsection
 @section('content')
-<!--====== Start Hero Area ======-->
-<section class="hero-area hero-v2 bg-contain bg-ocean-blue hero-padding"
-    style="background-image: url(assets/img/hero/hero-map-bg.png);">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <div class="hero-content">
-                    <div class="section-title section-title-white">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">Forum <span>Publikasi
-                                Karya Ilmiah & Penelitian</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="blob-image-wrapper">
-                    <div class="blob-shape-wrapper">
-                        <img src="/assets/img/particle/thumbs-up-particle-white.png" alt="white thumbs up"
-                            class="blob-shape blob-shape-1 animate-float-bob-y">
-                        <img src="/assets/img/particle/announcement-particle-white.png" alt="white announcement"
-                            class="blob-shape blob-shape-2 animate-float-bob-x">
-                        <img src="/assets/img/particle/paper-plane-particle-white.png" alt="white paper plane"
-                            class="blob-shape blob-shape-3 animate-float-bob-x">
-                    </div>
-            </div>
-        </div> <!-- /.row -->
-    </div> <!-- .container -->
-</section> <!-- /.hero-area -->
-<!--======= End Hero Area =======-->
 <!--====== Start Our Services Area ======-->
 <section class="our-services our-services-v1 pt-100"
     style="background-image: url(/assets/img/services/dots-pattern-bg.png);">
