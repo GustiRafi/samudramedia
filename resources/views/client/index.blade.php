@@ -72,7 +72,7 @@
             <div class="col-lg-6">
                 <div class="services-law-images content-left-spacer content-right-spacer">
                     <div class="services-law-image-main">
-                        <img src="/assets/img/logo-2.jpeg" alt="service law main">
+                        <img src="/assets/img/samudralogo.png" alt="service law main">
                     </div>
                 </div>
             </div>
@@ -84,10 +84,36 @@
                         </div>
                         <h2>Forum Publikasi Karya Ilmiah & Penelitian</h2>
                         <div class="section-title-description mb-0">
-                            <p>PT Samudera Media Nusantara adalah perusahaan yang bergerak di bidang pendidikan, penelitian & penerbitan. Perusahaan ini memiliki komitmen untuk menghasilkan karya-karya berkualitas dalam bentuk karya ilmiah berupa buku, jurnal dan media digital yang mencakup berbagai topik dan disiplin ilmu. Dengan tim profesional yang terdiri dari penulis, peneliti, editor, desainer, dan ahli dalam berbagai bidang keilmuan. PT Samudera Media Nusantara berusaha untuk memberikan kontribusi yang berarti bagi perkembangan dan penyebaran ilmu pengetahuan di Indonesia dan seluruh dunia. dan layanan unggulan PT Samudera Media Nusantara meliputi layanan pendidikan, layanan penelitian, layanan penerbitan, layanan pengelolaan jurnal, dan layanan produksi media</p>
+                            <p>PT Samudera Media Nusantara adalah perusahaan yang 
+                                bergerak di bidang pendidikan, penelitian & penerbitan.
+                                 Perusahaan ini memiliki komitmen untuk menghasilkan karya-karya
+                                  berkualitas dalam bentuk karya ilmiah berupa buku, jurnal dan media
+                                   digital yang mencakup berbagai topik dan disiplin ilmu. 
+                                   Dengan tim profesional yang terdiri dari penulis, peneliti, editor, 
+                                   desainer, dan ahli dalam berbagai bidang keilmuan. 
+                                   PT Samudera Media Nusantara berusaha untuk memberikan kontribusi
+                                    yang berarti bagi perkembangan dan penyebaran ilmu pengetahuan di 
+                                    Indonesia dan seluruh dunia. dan layanan unggulan PT Samudera Media
+                                     Nusantara meliputi layanan pendidikan, layanan penelitian, layanan penerbitan, 
+                                     layanan pengelolaan jurnal, dan layanan produksi media</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <h4 class="text-center mt-5 mb-4">Visi dan Misi</h4>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <h6 class="py-3 text-center">Visi</h6>
+                <p>Menjadi perusahaan terkemuka dibidang pendidikan, penelitian, dan penerbitan yang memberikan kontribusi positif dalam pengembangan ilmu pengetahuan dan teknologi untuk pengembangan pendidikan di Indonesia.</p>
+            </div>
+            <div class="col-md-6 col-12">
+                <h6 class="py-3 text-center">Misi</h6>
+                <p>Menghasilkan karya ilmiah berkualitas tinggi yang menginspirasi dan mendukung pengembangan ilmu pengetahuan.
+                    Menghasilkan penulis, peneliti dan ilmuan yang profesional di berbagai bidang keilmuan.
+                    Menyediakan platform bagi penulis, peneliti, dan akademisi untuk berbagi pengetahuan dan temuan melalui publikasi buku dan jurnal.
+                    Membangun kemitraan dengan lembaga-lembaga pendidikan, penelitian, dan industri untuk memperluas jangkauan dan dampak penerbitan karya ilmiah.
+                    Menjadi rujukan dan sumber informasi dalam memajukan pendidikan bertaraf internasional.</p>
             </div>
         </div> <!-- /.row -->
     </div> <!-- /.container -->

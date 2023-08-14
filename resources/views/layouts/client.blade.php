@@ -45,11 +45,11 @@
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Brand Logo -->
-                    <div class="col-xl-2 col-sm-5 col-5">
+                    <div class="col-xl-3 col-sm-5 col-5">
                         <div class="brand-logo">
                             <a href="/">
-                                <h5 class="logo-v1">Samudra Media</h5>
-                                <h5 class="logo-v2">Samudra Media</h5>
+                                <img src="/assets/img/samudralogo4.png" height="50px" alt="logo v1" class="logo-v1 w-50">
+                                <img src="/assets/img/samudralogo3.png" height="50px" alt="logo v2" class="logo-v2  w-50">
                             </a>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
                 <div class="row align-items-center">
                     <div class="col-12">
                         <div class="footer-copyright text-center text-white">
-                            <p class="text-white">&copy; 2023 <a href="#" class="text-white">Samudra Media.</a> All Rights Reserved</p>
+                            <p class="text-white">&copy; 2023 <a href="#" class="text-white">Samudra Media Nusantara.</a> All Rights Reserved</p>
                         </div>
                     </div>
                 </div> <!-- /.row -->
